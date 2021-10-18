@@ -1,0 +1,32 @@
+<div class="container card" style="max-width: 40%">
+  <form (ngSubmit)="onSubmit()">
+    <h3 class="text-center mt-3 mb-2">Add a To Do</h3>
+    <div class="container" sty>
+      <div class="form-group mb-2 mt-2">
+        <label style="font-weight: 500" for="title">Title</label>
+        <input
+          type="text"
+          name="title"
+          [(ngModel)]="title"
+          class="form-control"
+          id="title"
+          placeholder="Title"
+        />
+      </div>
+      <div class="form-group mb-2 mt-2">
+        <label style="font-weight: 500" for="desc">Description</label>
+        <input
+          type="text"
+          name="desc"
+          [(ngModel)]="desc"
+          class="form-control"
+          id="desc"
+          placeholder="Description"
+        />
+      </div>
+      <div class="container mt-3 mb-3 text-center">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="container mt-3">
+  <app-add-todo (addTodo)="todoAdd($event)"></app-add-todo>
+  <div class="row">
+    <h3 class="text-center mt-2 mb-3">To Do's</h3>
+    <h5 class="text-center text-success" *ngIf="this.todos.length === 0">
+      Congrats! there is nothing on your to-do list
+    </h5>
+    <div class="col-md-3" *ngFor="let todo of todos">
+      <div class="card">
+        <app-todo-item
+          [todo]="todo"
+          (todoDelete)="deleteTodo($event)"
+        ></app-todo-item>
+      </div>
+    </div>
+  </div>
+</div>
